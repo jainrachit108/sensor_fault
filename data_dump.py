@@ -1,13 +1,13 @@
 import pymongo
 import pandas as pd
 import json
-
+from sensor.config import mongo_client
 # Provide the mongodb localhost url to connect python to mongodb.
-mongo_client = pymongo.MongoClient('mongodb://localhost:27017')
+
 DATABASE_NAME = 'aps'
 COLLECTION_NAME = 'sensor'
 
-DATA_PATH = "C:/Users/91888/OneDrive/Desktop/sensor_fault/aps_failure_training_set1.csv"
+DATA_PATH = "aps_failure_training_set1.csv"
 
 if __name__ == '__main__':
     df =pd.read_csv(DATA_PATH)
